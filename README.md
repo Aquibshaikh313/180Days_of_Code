@@ -1,2 +1,3 @@
-# js-hindi-code
-A code repo for javascript by chai aur code
+# 100 Days of COde Challenge
+This repo contains my 100 days of code.
+Any new update or any new project that I made will be updated here

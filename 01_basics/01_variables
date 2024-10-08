@@ -1,6 +1,0 @@
-const accountId = 313313
-let accountEmail = "Aquib@google.com";
-var accountPassword = "12345"
-
-
-// Prefer not to used var since issue in block type and functional type

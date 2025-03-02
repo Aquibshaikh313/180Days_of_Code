@@ -18,3 +18,5 @@ console.log(newNums);
 
 const evenNums = myNums.filter((num) => num % 2 == 0);
 // console.log(evenNums);
+const oddNums = myNums.filter ((num)=> num % 2 !==0) //for odd
+console.log(oddNums);

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <button id="myButton">Click Me!</button>
+    <h1 id="chagnebtn">Aquib</h1> -->
+
+    <!-- <form id="myForm">
+        <input type="text" id="name" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+      </form> -->
+
+    <!-- <div
+      id="box"
+      style="width: 100px; height: 100px; background-color: lightgreen"
+    >
+      Hover over me!
+    </div> -->
+
+    <button class="colorButton" data-color="red">Red</button>
+<button class="colorButton" data-color="green">Green</button>
+<button class="colorButton" data-color="blue">Blue</button>
+
+  </body>
+  <script>
+    // document.getElementById('myButton').addEventListener("click",function(){
+    //     alert ("Bro u just clicked me");
+    // },false)
+
+    // document.getElementById('myButton').addEventListener("click",function(){
+    //    document.body.style.backgroundColor = "Red";
+    //    alert ("Bro u just clicked me & changed bg to red");
+    // },false)
+
+    // document.getElementById('myForm').addEventListener('submit',function(e){
+    //     e.preventDefault();
+    //     alert ('Form submitted successfully');
+    // },false)
+
+    // document.getElementById('chagnebtn').addEventListener('click',function(){
+    //     chagnebtn.innerText = "Aquib Bhai";
+    // })
+    // document.getElementById('box').addEventListener('mouseout',function(){
+    //     this.style.backgroundColor = "lightcoral";
+    // })
+    // document.getElementById('chagnebtn').addEventListener("click",function(){
+    //     chagnebtn.style.display = "none";
+    // })
+    // const buttons = document.querySelectorAll(".colorButton");
+
+    // document.getElementById('colorButton').forEach(funciton(button){
+    //     button.addEventListener('click',function(){
+
+    //     })
+    // })
+    const buttons = document.querySelectorAll(".colorButton");
+
+buttons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        const color = this.getAttribute("data-color");  // Get the color from data-color attribute
+        document.body.style.color = color;  // Change text color
+    });
+});
+
+  </script>
+</html>

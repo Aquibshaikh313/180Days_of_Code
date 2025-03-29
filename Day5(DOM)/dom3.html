@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Learning </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Learning</title>
     <style>
-        body{
-            background-color: #212121;
-            color: #fff;
-        }
+      body {
+        background-color: #212121;
+        color: #fff;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <input type="text" id="language" /> <button class="addbtn">Add</button>
     <ul class="language">
-        <li> Javascipt </li>
+      <li>Enter Languages below</li>
     </ul>
-</body>
-<script>
-    function addLanguage(language){
-        const li = document.createElement("li");
-        li.innerHTML = `${language}`;
-        document.querySelector('.language').appendChild(li);
+  </body>
+  <script>
+    const lang = document.querySelector("#language");
+    const addbtn = document.querySelector(".addbtn");
+    const ul = document.querySelector(".language");
+
+    addbtn.addEventListener("click", () => {
+      if (lang.value.trim() === "") {
+        alert("please enter language name");
+      } else {
+        addLanguage(lang.value);
+        lang.value = "";
+      }
+    });
+
+    function addLanguage(language) {
+      const li = document.createElement("li");
+      li.innerHTML = `${language}
+         <button class='delete'>Delete</button>`;
+      document.querySelector(".language").appendChild(li);
+
+      //Delete task
+      const delbtn = li.querySelector(".delete");
+      delbtn.addEventListener("click", () => {
+        li.remove();
+      });
     }
+    //keypress event
+    lang.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") addbtn.click();
+    });
 
-    addLanguage("Python");
-    addLanguage("typescript");
-
-    function addOptiLanguage(langName){
-        const li = document.createElement("li");
-        li.appendChild(document.createTextNode(langName))
-        document.querySelector('.language').appendChild(li);
-    }
-
-    addOptiLanguage('golang');
-
-    //Edit
-
-</script>
+     
+  </script>
 </html>

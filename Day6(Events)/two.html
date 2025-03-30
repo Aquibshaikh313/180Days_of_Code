@@ -36,10 +36,15 @@
     //    alert ("Bro u just clicked me & changed bg to red");
     // },false)
 
-    // document.getElementById('myForm').addEventListener('submit',function(e){
-    //     e.preventDefault();
-    //     alert ('Form submitted successfully');
-    // },false)
+    document.getElementById('myForm').addEventListener('submit',function(e){
+        e.preventDefault();
+        let inputField = document.getElementById('name');
+        let inputValue = inputField.value
+        alert (inputValue);
+        
+        inputField.value = '';
+        
+    },false)
 
     // document.getElementById('chagnebtn').addEventListener('click',function(){
     //     chagnebtn.innerText = "Aquib Bhai";

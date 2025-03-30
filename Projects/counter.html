@@ -51,8 +51,13 @@
       count++;
       updateCounter();
     });
+    // decrement.addEventListener("click", () => {
+    //   --count;
+    //   updateCounter();
+    // });
     decrement.addEventListener("click", () => {
-      --count;
+     if(count>0){ // Prevent count from going below 0
+       --count;
       updateCounter();
     });
     reset.addEventListener("click", () => {

@@ -74,7 +74,7 @@ setInterval(function () {
 }, 1000);
 ```
 
-## project4
+## project4 (random color generator)
 
 ```javascript
 const randomColor = function () {

@@ -72,3 +72,66 @@ const User = {
 
 const tea = Object.create(User)
 console.log(tea.email);
+
+
+//Examples to practise :
+
+//1:Bank Account System
+
+class BankAccount{
+    constructor(owner,balance){
+        this.owner = owner;
+        this.balance = balance;
+    }
+
+    get balance(){
+     return `${this._balance}`;
+    }
+    set balance (amount){
+        if (amount < 0) {
+            console.log("amount cant be negative");
+            
+            
+        } else {
+            this._balance = amount;
+            
+        }
+    }
+}
+
+const newAccount = new BankAccount("Aquib",'200')
+console.log(newAccount);
+
+newAccount.balance = 6000 ;
+console.log(newAccount.balance);
+
+newAccount.balance = -50;
+
+//2:Student Data Example
+ 
+class Student {
+    constructor(name,marks){
+        this.name = name;
+        this.marks = marks
+    }
+
+    get marks(){
+     return `${this._marks}`
+    }
+    set marks(val){
+        if (val < 0  || val>100) {
+            console.log('invalid marks should be between 0 to 100')
+        } else {
+            this._marks = val;
+            
+        }
+    }
+}
+
+const result = new Student ('Aquib Shaikh', '98')
+console.log(result);
+
+result.marks = 5;
+console.log(result.marks);
+
+result.marks = 101;

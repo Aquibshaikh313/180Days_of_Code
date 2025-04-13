@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <button id="green">green</button>
+    <button id="orange">Orange</button>
+  </body>
+
+  <script>
+    // function outerFunction() {
+    //   const name = "function";
+    //   function innerFunction() {
+    //     console.log(`this is inner ${name}`);
+    //   }
+    //   return innerFunction;
+    // }
+
+    // const inner = outerFunction();
+    // inner();
+
+    function outerFunction(name) {
+      return function () {
+        console.log(name);
+      };
+    }
+    const outerName = outerFunction("Mozilla");
+    outerName();
+
+    //Private Data
+
+    function secret(name) {
+      return function () {
+        console.log(name);
+      };
+    }
+    const Aquib = secret("AquibBhai");
+    const coding = secret("Aquib Loves coding");
+    Aquib();
+    coding();
+
+    function adding(x, y) {
+      return function () {
+        console.log(x + y);
+      };
+    }
+    const result = adding(5, 3);
+    result();
+  </script>
+
+  <script>
+    function clickHandler(color) {
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+    
+    document.getElementById('orange').onclick = clickHandler('orange')
+    document.getElementById('green').onclick = clickHandler('green')
+
+    //Alternate Method
+    // window.onload = function () {
+    //     function clickHandler(color) {
+    //         return function () {
+    //             document.body.style.backgroundColor = `${color}`;
+    //         }
+    //     }
+
+    //     const orange = clickHandler("orange");
+    //     orange(); // sets background color
+    // }
+
+
+</script>
+</html>

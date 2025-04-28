@@ -1,41 +1,38 @@
-// String operations
-let gameName = new String("Aquib");
-console.log(gameName);
-console.log(gameName.__proto__);  // Fixed the typo in __proto__
-console.log(gameName.charAt(4));
-console.log(gameName.indexOf("b"));
+let foo = 42; // foo is now a number
+// let foo = "12" + 12;// 1212 because of string concatenation
+//since we took 12 inside "" it considered as a string  and concatenated with number
+// console.log("abc"-12);//NaN
+// console.log("abc"* 12);//NaN
+// console.log("abc"/12);//NaN
+// console.log("abc"% 12);//NaN
+// console.log("abc"+12);//abc12 concatenation takes place
+//console.log("12" - 12);//0 because of string to number conversion takes place
+//console.log("12"* 12);//0 same as above conversion occurs
+//but during addition it takes as string and conatenation takes place
+//console.log(true);//1 true is 1 and false is 0 
+// console.log(true + 1);  // 2 boolean to number conversion takes place true is 1 
+// console.log(false + 1); // 1
+// console.log(true * 2);  // 2
 
-const url = "file:///C:/Desktop/180%20Days/Day1/dev.html";
-console.log(url.replace('%','zz'));
-console.log(url.includes('garmchai'));
-console.log(gameName.split('-'));
+//console.log(typeof(Nan));//number  
+// It is considered a special invalid number 
+// meaning it’s a number,
+// but an invalid or unrepresentable one.
 
-// Problems to practice
-let Name = "john doe";
-console.log(Name.charAt(0).toUpperCase()+Name.slice(1));
+//console.log(typeof(undefined));//undefined
+//console.log(typeof(symbol));//symbol
+//console.log(typeof(bigInt));//bigint
+//console.log(typeof(null));//object 
+//null is a special value that represents the absence of any value or object.
 
-let myName = "HELLO";
-console.log(myName.toLowerCase());
 
-let myName1 = "hello ";
-let myName2 = "world";
-console.log(myName1.concat(myName2));
-console.log(myName1.length);
 
-let isAllDigits = 12345;
-// let myFunction = function(isAllDigits)
 
-// Number operations
-const score = 400;
-console.log(score);
+let newName = "Aquib" + 123;
+// let newName = Aquib + 123;//error: Aquib is not defined
+// console.log(newName);//Aquib123
 
-const balance = new Number(100);
-console.log(balance);
-console.log(balance.toFixed(1)); // after decimal point
-console.log(balance.toString().length);
+foo = "bar"; // foo is now a string
+foo = true; // foo is now a boolean
 
-const newNumber = 100.6235;
-console.log(newNumber.toPrecision(3)); // before decimal point
 
-const hundred = 1000000;
-console.log(hundred.toLocaleString('en-IN'));

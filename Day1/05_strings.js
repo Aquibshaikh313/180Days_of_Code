@@ -1,35 +1,148 @@
-const name = "hitesh"
-const repoCount = 50
+// *********************************************
+// String Operations in JavaScript
+// *********************************************
 
-// console.log(name + repoCount + " Value");
+// String is a primitive data type in JavaScript
+//Primitive data types are immutable, 
+// meaning their values cannot be changed after they are created.
+//  When an operation appears to modify a primitive value,
+//  it actually creates a new value.
 
-console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
+let gameName = "Aquib123";
 
-const gameName = new String('hitesh-hc-com')
+// Basic Properties and Methods
+console.log(gameName);                 // Aquib123
+console.log(gameName.__proto__);        // String.prototype
+console.log(gameName.length);           // 8
+console.log(gameName.charAt(4));        // b
+console.log(gameName.indexOf("b"));     // 4
 
-// console.log(gameName[0]);
-// console.log(gameName.__proto__);
+// URL Example
+const url = "file:///C:/Desktop/180%20Days/Day1/dev.html";
 
+// console.log(url.replace("180%20Days/Day1/dev.html","Aquib's website"));file:///C:/Desktop/Aquib's website
+// console.log(url.replaceAll("file:///C:/Desktop/180%20Days/Day1/dev.html","Aquib"));//Aquib
+console.log(url.replace('%20', 'zz'));      // file:///C:/Desktop/180zzDays/Day1/dev.html
+console.log(url.includes('garmchai'));      // false
 
-// console.log(gameName.length);
-// console.log(gameName.toUpperCase());
-console.log(gameName.charAt(2));
-console.log(gameName.indexOf('t'));
+// Split Example
+console.log(gameName.split('-'));           // ["Aquib123"] (no '-' present, so whole string as 1 element)
 
-const newString = gameName.substring(0, 4)
-console.log(newString);
+// Practice Problems
+let Name = "john doe";
+const words = Name.split(" ");
+const capitalWords = words.map(word =>{
+    return word.charAt(0).toUpperCase() + word.slice(1)
+})
+let result = capitalWords.join(" ");
+console.log(result);//John Doe
 
-const anotherString = gameName.slice(-8, 4)
-console.log(anotherString);
+console.log(Name.charAt(0).toUpperCase() + Name.slice(1));  // John doe
 
-const newStringOne = "   hitesh    "
-console.log(newStringOne);
-console.log(newStringOne.trim());
+let myName = "HELLO";
+console.log(myName.toLowerCase());          // hello
 
-const url = "https://hitesh.com/hitesh%20choudhary"
+let myName1 = "hello ";
+let myName2 = "world";
+console.log(myName1.concat(myName2));        // hello world
+console.log(myName1.length);                 // 6 (space counts too)
 
-console.log(url.replace('%20', '-'))
+// Checking if all digits (Extra Tip)
+let isAllDigits = "12345";
+function checkAllDigits(str) {
+    return /^\d+$/.test(str);
+}
+console.log(checkAllDigits(isAllDigits));    // true
 
-console.log(url.includes('sundar'))
+// *********************************************
+// Number Operations
+// *********************************************
 
-console.log(gameName.split('-'));
+const score = 400;
+console.log(score);                         // 400
+
+const balance = new Number(100);
+console.log(balance);                       // [Number: 100]
+console.log(balance.toFixed(1));             // 100.0 
+// console.log(balance.toFixed(2));             // 100.00
+console.log(balance.toString().length);      // 3  toString converts into string
+
+const newNumber = 100.6235;
+console.log(newNumber.toPrecision(3));       // 101 (rounded)
+// console.log(newNumber.toPrecision(5));       // 100.63 (rounded)
+
+const hundred = 1000000;
+console.log(hundred.toLocaleString('en-IN')); // 10,00,000 (Indian format)
+
+// String + Variables Example
+const name = "hitesh";
+const repoCount = 50;
+console.log(`Hello my name is ${name} and my repo count is ${repoCount}`); // template literals
+
+// More String Methods
+const gameNamed = new String('hitesh-hc-com');
+
+console.log(gameNamed[0]);                   // h
+console.log(gameNamed.length);               // 13
+console.log(gameNamed.toUpperCase());        // HITESH-HC-COM
+console.log(gameNamed.charAt(2));             // t
+console.log(gameNamed.indexOf('t'));          // 2
+
+const newString = gameNamed.substring(0, 4);
+console.log(newString);                      // hite
+
+const anotherString = gameNamed.slice(-8, 4); 
+console.log(anotherString);                  // (empty string '' because start > end)
+
+// Trimming spaces
+const newStringOne = "   hitesh    ";
+console.log(newStringOne.trim());            // "hitesh"
+
+// Custom Method using Prototype (Extra Tip)
+// Uncomment below to use
+// String.prototype.trueLength = function() {
+//     return this.trim().length;
+// };
+// console.log(newStringOne.trueLength());    // 6
+
+// URL Replacing and Checking
+const url2 = "https://hitesh.com/hitesh%20choudhary";
+console.log(url2.replace('%20', '-'));        // https://hitesh.com/hitesh-choudhary
+console.log(url2.includes('sundar'));         // false
+
+// Splitting and Joining Strings
+const family = "sonu tony neha";
+const splitFamily = family.split(" ");       // ["sonu", "tony", "neha"]
+console.log(splitFamily);
+const joinFamily = splitFamily.join(" ");
+console.log(joinFamily);                     // sonu tony neha
+
+// *********************************************
+// Extra String Methods You Should Also Know:
+// *********************************************
+
+let str = "HelloWorld";
+
+// slice(start, end) --> extracts section
+console.log(str.slice(0, 5));                 // Hello
+console.log(str.slice(-5));                   // World
+
+// substring(start, end) --> similar to slice but no negative indexes
+console.log(str.substring(0, 5));              // Hello
+
+// substr(start, length) --> deprecated but sometimes used
+console.log(str.substr(0, 5));                 // Hello
+
+// repeat() --> repeat string
+console.log(str.repeat(2));                    // HelloWorldHelloWorld
+
+// includes(substring) --> check if string contains substring
+console.log(str.includes('World'));            // true
+
+// startsWith() and endsWith()
+console.log(str.startsWith('Hell'));            // true
+console.log(str.endsWith('World'));             // true
+
+// padStart() and padEnd() --> for padding
+console.log('5'.padStart(4, '0'));              // 0005
+console.log('5'.padEnd(4, '0'));                // 5000

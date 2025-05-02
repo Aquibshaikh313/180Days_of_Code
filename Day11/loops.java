@@ -134,6 +134,74 @@ public class Main {
       //   i--;
       // }
 
+    // Scanner scn = new Scanner(System.in);
+      // int a = scn.nextInt();//5
+      // // int b = 1;
+      // while(a>=1){
+      //   System.out.print(b + " ");
+      //   b++;
+      // }//1 2 3 4 5
+      
+      // input a = 1;
+      // Scanner scn = new Scanner(System.in);
+      // int a = scn.nextInt();//1
+      // // int b = 1;
+      // while(a<=5){
+      //   System.out.print(a + " ");
+      //   a++;
+      // }//1 2 3 4 5
+
+      // Scanner scn = new Scanner(System.in);
+      // int b = scn.nextInt();//5
+      
+      // while(b>=1){
+      //   System.out.print(b + " ");
+      //   b--;
+      // }//5 4 3 2 1
+
+      // Even numbers from 1 to 5;
+      // Scanner scn = new Scanner(System.in);
+      // int a = scn.nextInt();
+      // int n = 1;
+
+      // while(n<=a){//a=5;
+      //   if(n%2==0){
+      //     System.out.print(n + " ");
+          
+      //   }
+      //   n++;
+      // }
+
+      // odd numbers from 1 to 5;
+      // Scanner scn = new Scanner(System.in);
+      // int a = scn.nextInt();
+      // int n = 1;
+
+      // while(n<=a){//a=5;
+      //   if(n%2!=0){
+      //     System.out.print(n + " ");
+          
+      //   }
+      //   n++;
+      // }
+      
+
+      // Multiple of 4
+      // Scanner scn = new Scanner(System.in);
+      // int a = scn.nextInt();//22
+
+      // int b = 1;
+      // while(b<=a){
+      //   if(b%4==0){
+      //     System.out.print(b + " ");
+      //   }
+      //   b++;
+      // }
+
+      while(true) {
+             System.out.println("Hello");
+         }
+
       
 
 

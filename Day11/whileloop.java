@@ -198,9 +198,48 @@ public class Main {
       //   b++;
       // }
 
-      while(true) {
-             System.out.println("Hello");
-         }
+      // while(true) {
+      //        System.out.println("Hello");
+      //    }
+   //printing even numbers from 1 to n
+    // Scanner scn = new Scanner(System.in);
+    // int n = scn.nextInt();
+
+    // while(n>=0){
+    //   if(n%2==0){
+    //     System.out.print(n + " ");
+        
+    //   }
+    //   n--;
+    // }
+
+    // Take an integer A as input. You have to print the sum of all odd numbers in the range [1, A].
+   
+    // Scanner scn = new Scanner(System.in);
+    // int n = scn.nextInt();
+    // int i = 1;
+    // int sum = 0;
+    // while(i<=n){
+    //   if(i%2!=0){
+    //     sum = sum + i;
+    //   }
+    //   i++;
+    // }
+    //  System.out.print(sum);
+
+    
+  // // Take a number A as input, print its multiplication table having the first 10 multiples.
+  //     Scanner scn = new Scanner(System.in);
+  //     int x = scn.nextInt();
+  //     int y = 1;
+
+  //     while(y<=10){
+  //       System.out.print(x  + " * " + y);
+  //       System.out.println(" = " + (x*y));
+        
+  //       y++;
+        
+  //     }
 
       
 

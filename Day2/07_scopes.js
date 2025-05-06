@@ -40,9 +40,6 @@ if (true){
 
 // Example for pracitse************
 
-function addone (num){
-    return num + 1;
-}
-addone(5);
+
 
 

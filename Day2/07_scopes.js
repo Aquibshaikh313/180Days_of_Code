@@ -1,3 +1,8 @@
+// There are mainly 3 types of scope in JavaScript:
+// Global Scope – Variables accessible from anywhere in the program.
+// Function Scope – Variables accessible only within the function.
+// Block Scope – Variables defined with let or const inside {}
+
 // let a = 300;
 
 // if (true) {
@@ -38,7 +43,33 @@ if (true){
 }
 // console.log(usersname);
 
-// Example for pracitse************
+// *****************Example for pracitse************
+// Example1
+function one() {
+    const username = "Aquib";
+    function two() {
+        const website = "youtube";
+        console.log(username); // ✅ Can access parent scope
+    }
+    two();
+    // console.log(website); ❌ Error: not accessible here
+}
+ one();
+// Inner functions can access variables of outer functions—this is known as a closure
+
+// Example2:
+if(true){
+    const username = "shaikh";
+    if(username==="shaikh"){
+        const Website = " youtube";
+        console.log(username + Website);//accesible here
+
+    }
+    // console.log(Website);//Error:website is blocked scope
+    
+}
+//console.log(username);Error: username is block-scoped
+
 
 
 

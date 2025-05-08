@@ -1,3 +1,12 @@
+// basic syntax
+const add = (a,b) => a + b;
+
+// with single parameter(no parenthesis needed)
+const square = n = n * n ;
+
+//with no parameter
+const greet = () => console.log("Hello world");
+
 // const chai = function (){
 //     let username = "Aquib";
 //     console.log(this.username);
@@ -8,7 +17,6 @@ const chai = () => {
     let username = "Aquib";
     // console.log(this);
 }
-// console.log(chai());
  chai ();
 
 

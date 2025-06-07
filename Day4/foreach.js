@@ -1,4 +1,5 @@
 // for each loop in Js
+// it doesn't return new array it make changes in original one..
 
 const coding = ["js", "py", "c++", "java", "cpp"];
 

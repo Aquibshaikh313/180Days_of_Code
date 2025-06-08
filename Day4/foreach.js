@@ -59,3 +59,22 @@ users.forEach((user) =>{
 })
 
 console.log(`Total Amount: ₹${total}`);
+
+//printing task completion
+const tasks = ["Code", "Exercise", "Read"];
+
+tasks.forEach((task,index)=>{
+  console.log(`task ${index + 1}: ${task} completed `)
+});
+
+//count how many strings have more than 4 letters
+const words = ["apple", "dog", "banana", "cat"];
+let count = 0;
+
+words.forEach((word,index,array)=>{
+  if(word.length > 4){
+    count++;
+  }
+});
+console.log("words with more than 4 letters:", count );
+

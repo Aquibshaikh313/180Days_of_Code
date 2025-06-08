@@ -33,3 +33,29 @@ arrs.forEach((element) => {
   numcall++;
 });
 console.log(numcall);
+
+//Calculating total using foreach
+const cart = [
+  { name: "Book", price: 200 },
+  { name: "Pen", price: 20 },
+  { name: "Bag", price: 500 },
+   { name: "Baingan", price: 700 },
+];
+
+let total = 0;
+const newCart = cart.filter(item => item.price > 200);
+console.log(newCart);
+
+newCart.forEach((item) => {
+  total += item.price;
+});
+
+// Sending Welcome Emails (Simulation)
+const users = ["Alice", "Bob", "Charlie"];
+
+users.forEach((user) =>{
+  console.log(`Sending welcome email to ${user}`);
+  
+})
+
+console.log(`Total Amount: ₹${total}`);

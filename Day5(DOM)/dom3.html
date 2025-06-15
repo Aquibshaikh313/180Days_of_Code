@@ -12,42 +12,43 @@
     </style>
   </head>
   <body>
-    <input type="text" id="language" /> <button class="addbtn">Add</button>
-    <ul class="language">
-      <li>Enter Languages below</li>
-    </ul>
-  </body>
-  <script>
-    const lang = document.querySelector("#language");
-    const addbtn = document.querySelector(".addbtn");
-    const ul = document.querySelector(".language");
+    <h3>Add programming languages you know</h3>
 
-    addbtn.addEventListener("click", () => {
-      if (lang.value.trim() === "") {
-        alert("please enter language name");
-      } else {
-        addLanguage(lang.value);
-        lang.value = "";
-      }
-    });
+    <form id="langForm">
+      <input type="text" id="language" autocomplete="off" />
+      <button type="submit">Add</button>
+    </form>
 
-    function addLanguage(language) {
-      const li = document.createElement("li");
-      li.innerHTML = `${language}
-         <button class='delete'>Delete</button>`;
-      document.querySelector(".language").appendChild(li);
+    <ul class="language"></ul>
 
-      //Delete task
-      const delbtn = li.querySelector(".delete");
-      delbtn.addEventListener("click", () => {
-        li.remove();
+    <script>
+      const lang = document.querySelector("#language");
+      const form = document.querySelector("#langForm");
+      const ul = document.querySelector(".language");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault(); // prevent form refresh
+        if (lang.value.trim() === "") {
+          alert("Please enter a language name");
+        } else {
+          addLanguage(lang.value.trim());
+          lang.value = "";
+        }
       });
-    }
-    //keypress event
-    lang.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") addbtn.click();
-    });
 
-     
-  </script>
+      function addLanguage(language) {
+        const li = document.createElement("li");
+        li.innerHTML = `${language} <button class='delete'>Delete</button>`;
+        ul.appendChild(li);
+
+        //Delete task
+        
+        li.querySelector(".delete").addEventListener("click", () => {
+          li.remove();
+        });
+      }
+
+      // Enter key press is handled automatically by form submission
+    </script>
+  </body>
 </html>

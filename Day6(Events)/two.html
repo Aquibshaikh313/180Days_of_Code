@@ -3,73 +3,73 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Event Handling Example</title>
   </head>
   <body>
-    <!-- <button id="myButton">Click Me!</button>
-    <h1 id="chagnebtn">Aquib</h1> -->
+    <!-- Button to trigger an alert and change background -->
+    <button id="myButton">Click Me!</button>
 
-    <!-- <form id="myForm">
-        <input type="text" id="name" placeholder="Enter your name">
-        <button type="submit">Submit</button>
-      </form> -->
+    <!-- Clickable heading to change its own text -->
+    <h1 id="chagnebtn">Aquib</h1>
 
-    <!-- <div
+    <!-- Form that prevents default submit and alerts input value -->
+    <form id="myForm">
+      <input type="text" id="name" placeholder="Enter your name" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Box that changes color on mouse out -->
+    <div
       id="box"
       style="width: 100px; height: 100px; background-color: lightgreen"
     >
       Hover over me!
-    </div> -->
+    </div>
 
+    <!-- Buttons to change text color of the whole page -->
     <button class="colorButton" data-color="red">Red</button>
-<button class="colorButton" data-color="green">Green</button>
-<button class="colorButton" data-color="blue">Blue</button>
+    <button class="colorButton" data-color="green">Green</button>
+    <button class="colorButton" data-color="blue">Blue</button>
 
+    <!-- JavaScript Code -->
+    <script>
+      // 1. Click event on #myButton to change background and show alert
+      document.getElementById("myButton").addEventListener("click", function () {
+        document.body.style.backgroundColor = "red";
+        alert("Bro, you just clicked me & changed the background to red!");
+        
+        // Also change <h1> text color to white
+        const h1 = document.querySelector("h1");
+        h1.style.color = "white";
+      });
+
+      // 2. Form submission event (prevent default and alert input)
+      document.getElementById("myForm").addEventListener("submit", function (e) {
+        e.preventDefault(); // Stop the form from submitting
+        const inputField = document.getElementById("name");
+        const inputValue = inputField.value;
+        alert(inputValue); // Show entered name
+        inputField.value = ""; // Clear the input
+      });
+
+      // 3. Click event on <h1> to change its own text
+      document.getElementById("chagnebtn").addEventListener("click", function () {
+        this.textContent = "Aquib Bhai";
+      });
+
+      // 4. Mouseout event on #box to change its background color
+      document.getElementById("box").addEventListener("mouseout", function () {
+        this.style.backgroundColor = "lightcoral";
+      });
+
+      // 5. Click events on buttons to change text color of the page
+      const buttons = document.querySelectorAll(".colorButton");
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          const color = this.getAttribute("data-color");
+          document.body.style.color = color; // Change text color
+        });
+      });
+    </script>
   </body>
-  <script>
-    // document.getElementById('myButton').addEventListener("click",function(){
-    //     alert ("Bro u just clicked me");
-    // },false)
-
-    // document.getElementById('myButton').addEventListener("click",function(){
-    //    document.body.style.backgroundColor = "Red";
-    //    alert ("Bro u just clicked me & changed bg to red");
-    // },false)
-
-    document.getElementById('myForm').addEventListener('submit',function(e){
-        e.preventDefault();
-        let inputField = document.getElementById('name');
-        let inputValue = inputField.value
-        alert (inputValue);
-        
-        inputField.value = '';
-        
-    },false)
-
-    // document.getElementById('chagnebtn').addEventListener('click',function(){
-    //     chagnebtn.innerText = "Aquib Bhai";
-    // })
-    // document.getElementById('box').addEventListener('mouseout',function(){
-    //     this.style.backgroundColor = "lightcoral";
-    // })
-    // document.getElementById('chagnebtn').addEventListener("click",function(){
-    //     chagnebtn.style.display = "none";
-    // })
-    // const buttons = document.querySelectorAll(".colorButton");
-
-    // document.getElementById('colorButton').forEach(funciton(button){
-    //     button.addEventListener('click',function(){
-
-    //     })
-    // })
-    const buttons = document.querySelectorAll(".colorButton");
-
-buttons.forEach(function(button) {
-    button.addEventListener("click", function() {
-        const color = this.getAttribute("data-color");  // Get the color from data-color attribute
-        document.body.style.color = color;  // Change text color
-    });
-});
-
-  </script>
 </html>

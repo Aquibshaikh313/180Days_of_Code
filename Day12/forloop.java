@@ -1,332 +1,154 @@
-// import java.util.*;
-// public class Main {
-//   public static void main(String[] args) {
-    
-//     //print 1 to 5
+import java.util.*;
 
-//     // for(int i=1;i<=5;i++){
-//     //   System.out.print(i + " ");
-//     // }
-//     // Scanner scn = new Scanner(System.in);
-//     // int n = scn.nextInt();
+public class Main {
+  public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
 
-//     // Even number between 1 to n
-//     // Scanner sc = new Scanner(System.in);
-//     // int n = sc.nextInt();
-//     // for(int i=1; i<=n;i++){
-//     //   if(i%2==0){
-//     //     System.out.print(i + " ");
-//     //   }
-//     // }
-//     // Alternate method for even numbers
-//     // Scanner sc = new Scanner(System.in);
-//     // int n = sc.nextInt();
-//     // for(int i=2; i<=n;i+=2){
-//     //   System.out.print(i + " ");
-//     // }
-    
-//     // print any no. seprately in reverse order
-//     //  Scanner sc = new Scanner(System.in);
-//     // int n = sc.nextInt();
-//     // while(n>0){
-//     //   int digit = n%10;
-//     //   System.out.print(digit + " ");
-//     //   n = n/10;// i.e n/=10;
-//     // }
-    
-//     //same thing by using for loop
-//     // for(  ; n>0 ; n/=10 ){
-//     //   int digit = n%10;
-//     //   System.out.print(digit + " ");
-//     // }
+    // ===================== 1. Print numbers from 1 to 5 =====================
+    // for (int i = 1; i <= 5; i++) {
+    //   System.out.print(i + " ");
+    // }
 
-//     //if the input is negative
-//     // Scanner scn = new Scanner(System.in);
-//     // int n = scn.nextInt();
-//     // if(n<0){
-//     //   n = n * -1;
-      
-//     // }else if (n==0){
-//     //   System.out.print(0);
-//     // }
-    
-//     //  while(n>0){
-//     //   int digit = n%10;
-//     //   System.out.print(digit + " ");
-//     //   n = n/10;
-//     // }
+    // ===================== 2. Print even numbers from 1 to n =====================
+    // int n = scn.nextInt();
+    // for (int i = 1; i <= n; i++) {
+    //   if (i % 2 == 0) {
+    //     System.out.print(i + " ");
+    //   }
+    // }
 
-//     // for(  ; n>0 ; n/=10 ){
-//     //   int digit = n%10;
-//     //   System.out.print(digit + " ");
-//     // }
+    // === Alternate method: start from 2 and increment by 2 ===
+    // int n = scn.nextInt();
+    // for (int i = 2; i <= n; i += 2) {
+    //   System.out.print(i + " ");
+    // }
 
-//     //count the number of iterations:
-//     // Scanner scn = new Scanner(System.in);
-//     // int n = scn.nextInt();
-//     // int count = 0;
-    
-//     // while(n>0){
-//     //   n/=10;
-//     //   count++;
-     
-//     // }
-//     //  System.out.print(count);
-    
-//     // for( ;n>0;n/=10){
-//     //      count++;
+    // ===================== 3. Print digits in reverse =====================
+    // int n = scn.nextInt();
+    // while (n > 0) {
+    //   int digit = n % 10;
+    //   System.out.print(digit + " ");
+    //   n /= 10;
+    // }
 
-//     // }
-//     // System.out.print(count);
+    // === Same with for loop ===
+    // for (; n > 0; n /= 10) {
+    //   int digit = n % 10;
+    //   System.out.print(digit + " ");
+    // }
 
-//     // Scanner scn = new Scanner(System.in);
-//     // int n = scn.nextInt();
-//     // int count = 0;
-//     // for(int i = n; i>0; i/=10){
-//     //   count++;
-//     // }
-//     // System.ut.print(count);
+    // ===================== 4. Handle negative input before reversing digits =====================
+    // int n = scn.nextInt();
+    // if (n < 0) {
+    //   n = -n;
+    // } else if (n == 0) {
+    //   System.out.print(0);
+    // }
+    // while (n > 0) {
+    //   int digit = n % 10;
+    //   System.out.print(digit + " ");
+    //   n /= 10;
+    // }
 
-//      Scanner scn = new Scanner(System.in);
-//      int n = scn.nextInt();
-    
-//      if( n < 0){
-//       n = n * -1;
+    // ===================== 5. Count number of digits =====================
+    // int n = scn.nextInt();
+    // int count = 0;
+    // while (n > 0) {
+    //   n /= 10;
+    //   count++;
+    // }
+    // System.out.print(count);
 
-//     }
-//      int sum = 0;
-//     // while(n>0){
-//     //   int digit = n%10;
-//     //    sum = sum + digit;
-//     //   n/=10;
-//     // }
-//     // System.out.print(sum);
+    // === Using for loop ===
+    // int count = 0;
+    // for (; n > 0; n /= 10) {
+    //   count++;
+    // }
+    // System.out.print(count);
 
-//     for( ; n>0 ; n/=10){
-//       int digit = n%10;
-//       sum = sum + digit;
-//     }
-//     System.out.print(sum);
-      
-  
+    // ===================== 6. Sum of digits (handle negative input) =====================
+    // int n = scn.nextInt();
+    // if (n < 0) {
+    //   n = -n;
+    // }
+    // int sum = 0;
+    // for (; n > 0; n /= 10) {
+    //   int digit = n % 10;
+    //   sum += digit;
+    // }
+    // System.out.print(sum);
 
-        
-//   }
-// }import java.util.*;
-// public class Main {
-//   public static void main(String[] args) {
-    
-//     //print 1 to 5
+    // ===================== 7. Print multiples of 4 up to n =====================
+    // int n = scn.nextInt();
+    // for (int i = 1; i <= n; i++) {
+    //   if (i % 4 == 0) {
+    //     System.out.print(i + " ");
+    //   }
+    // }
 
-//     // for(int i=1;i<=5;i++){
-//     //   System.out.print(i + " ");
-//     // }
-//     // Scanner scn = new Scanner(System.in);
-//     // int n = scn.nextInt();
+    // ===================== 8. Print natural numbers from n to 1 =====================
+    // int n = scn.nextInt();
+    // for (; n >= 1; n--) {
+    //   System.out.print(n + " ");
+    // }
 
-//     // Even number between 1 to n
-//     // Scanner sc = new Scanner(System.in);
-//     // int n = sc.nextInt();
-//     // for(int i=1; i<=n;i++){
-//     //   if(i%2==0){
-//     //     System.out.print(i + " ");
-//     //   }
-//     // }
-//     // Alternate method for even numbers
-//     // Scanner sc = new Scanner(System.in);
-//     // int n = sc.nextInt();
-//     // for(int i=2; i<=n;i+=2){
-//     //   System.out.print(i + " ");
-//     // }
-    
-//     // print any no. seprately in reverse order
-//     //  Scanner sc = new Scanner(System.in);
-//     // int n = sc.nextInt();
-//     // while(n>0){
-//     //   int digit = n%10;
-//     //   System.out.print(digit + " ");
-//     //   n = n/10;// i.e n/=10;
-//     // }
-    
-//     //same thing by using for loop
-//     // for(  ; n>0 ; n/=10 ){
-//     //   int digit = n%10;
-//     //   System.out.print(digit + " ");
-//     // }
+    // ===================== 9. Print natural numbers from n to 5 =====================
+    // int n = scn.nextInt();
+    // for (; n <= 5; n++) {
+    //   System.out.print(n + " ");
+    // }
 
-//     //if the input is negative
-//     // Scanner scn = new Scanner(System.in);
-//     // int n = scn.nextInt();
-//     // if(n<0){
-//     //   n = n * -1;
-      
-//     // }else if (n==0){
-//     //   System.out.print(0);
-//     // }
-    
-//     //  while(n>0){
-//     //   int digit = n%10;
-//     //   System.out.print(digit + " ");
-//     //   n = n/10;
-//     // }
+    // ===================== 10. Print last digit of number =====================
+    // int n = scn.nextInt(); // e.g., 1140
+    // int lastDigit = n % 10;
+    // System.out.print(lastDigit);
 
-//     // for(  ; n>0 ; n/=10 ){
-//     //   int digit = n%10;
-//     //   System.out.print(digit + " ");
-//     // }
+    // ===================== 11. Print digits in reverse =====================
+    // int n = scn.nextInt(); // e.g., 1245 → 5 4 2 1
+    // for (; n >= 1; n /= 10) {
+    //   int digit = n % 10;
+    //   System.out.print(digit + " ");
+    // }
 
-//     //count the number of iterations:
-//     // Scanner scn = new Scanner(System.in);
-//     // int n = scn.nextInt();
-//     // int count = 0;
-    
-//     // while(n>0){
-//     //   n/=10;
-//     //   count++;
-     
-//     // }
-//     //  System.out.print(count);
-    
-//     // for( ;n>0;n/=10){
-//     //      count++;
+    // === Handle negative number before reverse ===
+    // int n = scn.nextInt(); // e.g., -1245 → 5 4 2 1
+    // if (n < 0) {
+    //   n = -n;
+    // }
+    // for (; n >= 1; n /= 10) {
+    //   int digit = n % 10;
+    //   System.out.print(digit + " ");
+    // }
 
-//     // }
-//     // System.out.print(count);
+    // ===================== 12. Sum of digits =====================
+    // int n = scn.nextInt(); // e.g., 123 → 6
+    // int sum = 0;
+    // for (; n >= 1; n /= 10) {
+    //   int digit = n % 10;
+    //   sum += digit;
+    // }
+    // System.out.print(sum);
 
-//     // Scanner scn = new Scanner(System.in);
-//     // int n = scn.nextInt();
-//     // int count = 0;
-//     // for(int i = n; i>0; i/=10){
-//     //   count++;
-//     // }
-//     // System.ut.print(count);
+    // ===================== 13. Print numbers from A to B =====================
+    // int a = scn.nextInt(); // e.g., 5
+    // int b = scn.nextInt(); // e.g., 10
+    // for (; a <= b; a++) {
+    //   System.out.print(a + " ");
+    // }
 
-//      Scanner scn = new Scanner(System.in);
-//      int n = scn.nextInt();
-    
-//      if( n < 0){
-//       n = n * -1;
-
-//     }
-//      int sum = 0;
-//     // while(n>0){
-//     //   int digit = n%10;
-//     //    sum = sum + digit;
-//     //   n/=10;
-//     // }
-//     // System.out.print(sum);
-
-//     for( ; n>0 ; n/=10){
-//       int digit = n%10;
-//       sum = sum + digit;
-//     }
-//     System.out.print(sum);
-
-    //for loop Assignments 
-    // Given an integer input N, print all multiples of 4 less than or equal to N.
-
-  // Scanner scn = new Scanner(System.in);
-  // int n = scn.nextInt();
-
-  // for(int y = 1 ; y<=n ;y++ ){
-  //   if(y%4==0){
-  //      System.out.print(y + " ");
-  //   }//4 8 12 16
-  
-  // }
-  
-  // Write a program to print all Natural numbers from N to 1 where you have to take N as input from user
-  // Scanner scn = new Scanner(System.in);
-  // int n = scn.nextInt();
-  // for( ;n>=1;n--){
-  //   System.out.print(n + " ");
-  // }//5 4 3 2 1
-
-  // }
-
-  // Scanner scn = new Scanner(System.in);
-  // int n = scn.nextInt();
-  // for( ;n<=5;n++){
-  //   System.out.print(n + " ");
-  // }//1 2 3 4 5
-
-
-  // Scanner scn = new Scanner(System.in);//input 1140
-  // int n = scn.nextInt();
-  
-  // int lastDigit = n%10;
-  // System.out.print(lastDigit);//0
-
-
-  // }
-
-  // Scanner scn = new Scanner(System.in);//1245
-  // int n = scn.nextInt();
-
-  // for(  ;n>=1; n/=10){
-  //   int digit = n%10;
-  //   System.out.print(digit + " ");
-  // }//5421
-
-//if value is negative
-//   Scanner scn = new Scanner(System.in);//-1245
-//   int n = scn.nextInt();
-//   if (n<=0){
-//     n = n * -1;
-//   }
-//   for(  ;n>=1; n/=10){
-//     int digit = n%10;
-//     System.out.print(digit + " ");
-//   }
-
-  // Scanner scn = new Scanner(System.in);//123
-  // int n = scn.nextInt();
-
-  // int sum = 0;
-
-  // for( ;n>=1;n/=10){
-  //   int digit = n%10;
-  //   sum = sum + digit;
-
-  // }
-  // System.out.print(sum);//6
-
-  // Given two numbers, A and B, your task is to print all the numbers
-  //  in the range from A to B (both inclusive), with each number followed
-  //  by a space, including the last number.
-  
-  // input 5 10
-  // Scanner scn = new Scanner(System.in); 
-  // int y = scn.nextInt();
-  // int x = scn.nextInt();
-
-  // for( ;y<=x ; y++){
-  //   System.out.print(y + " " );
-  //  // output 5 6 7 8 9 10
-  // }
-
-  // You have a number N, you have to write a code to 
-  // find odd digit sum and even digit sum from given number and print it.
-
-  // Scanner scn = new Scanner(System.in);
-  // int n = scn.nextInt();
-  // int evenSum = 0;
-  // int oddSum = 0;
-
-  // for(  ; n>0 ; n/=10){
-  //   int digit = n%10;
-
-  //   if(digit%2==0){
-  //     evenSum +=  digit;
-  //   }else{
-  //     oddSum +=digit;
-  //   }
-  // }
-  // System.out.println("sum even no. is " + evenSum);
-  // System.out.println("sum of odd no. is " + oddSum);
-      
-  
-
-        
-//   }
-// }
+    // ===================== 14. Odd and Even Digit Sums =====================
+    // int n = scn.nextInt(); // e.g., 1234 → even: 6, odd: 4
+    // int evenSum = 0;
+    // int oddSum = 0;
+    // for (; n > 0; n /= 10) {
+    //   int digit = n % 10;
+    //   if (digit % 2 == 0) {
+    //     evenSum += digit;
+    //   } else {
+    //     oddSum += digit;
+    //   }
+    // }
+    // System.out.println("Sum of even digits: " + evenSum);
+    // System.out.println("Sum of odd digits: " + oddSum);
+  }
+}

@@ -176,3 +176,156 @@ public class Main {
 //   System.out.println(sum(x,y));
 // }
 // }
+
+      // ************************************Assignments: problems based on funcitons 2************************************************
+// 1) Print even and odd numbers >>
+// import java.util.*;
+// public class Main {
+//   public static String evenOdd(int N){
+//     if(A%2 == 0){
+//       return "Even";
+
+//     }else{
+//       return "Odd";
+//     }
+//   }
+
+
+//   public static void main(String[] args){
+//     Scanner scn = new Scanner(System.in);
+//     int N = scn.nextInt();
+//     System.out.print(evenOdd(N));
+//   }
+// }
+
+// 2) You are given a function that takes an integer argument A. Return 1 if A is a perfect square otherwise return 0.
+
+// A perfect square is an integer that is the square of an integer. For example 16 is perfect square as it is the square of an integer 4 (42 = 16)
+// import java.util.*;
+// public class Main {
+//   public static int perfSquare(int N){
+//     for(int i=1;i*i<=N;i++){
+//       if(i*i == N){
+//         return 1;
+//       }
+//     } 
+//     return 0;
+    
+//   }
+//   public static void main(String[] args){
+//     Scanner scn = new Scanner(System.in);
+//     int N = scn.nextInt();
+
+//     System.out.println(perfSquare(N));
+    
+   
+//   }
+// }
+
+// 3)You are given an integer A, you need to find and return the sum of all the even numbers between 1 and A.
+// import java.util.*;
+// public class Main {
+//   public static int evenNums(int N){
+//     int ans = 0;
+//     for (int i = 2; i<=N; i+=2){
+//       if(i%2 == 0){
+//         ans +=i;
+//       }
+
+//     }
+//     return ans;
+    
+//   }
+//   public static void main(String[] args){
+//     Scanner scn = new Scanner(System.in);
+//     int N = scn.nextInt();
+//     System.out.print(evenNums(N));    
+      
+//   }
+// }
+
+// 4) You are given two integers A and B. You have to find the value of AB.
+
+// import java.util.*;
+// public class Main {
+//   public static int power(int A, int B){
+//     int result = (int)Math.pow(A,B);
+
+//     return result;
+
+//   }
+//   public static void main(String[] args){
+//     Scanner scn = new Scanner(System.in);
+//     int A = scn.nextInt();
+//     int B = scn.nextInt();
+
+//     System.out.println(power(A,B));
+
+//   }
+// }
+
+// 5)You are given a positive integer A denoting the radius of a sphere. You have to calculate the volume of the sphere.
+// Volume of a sphere having radius R is given by (4 * π * R3) / 3.
+
+// import java.util.*;
+// public class Main {
+//   public static int volOfSphere(int R){
+//    double result = 4*Math.PI*Math.pow(R,3)/3;
+//    int C = (int)Math.ceil(result);   // typecasting from double to int
+      
+// return C;
+   
+//   }
+//   public static void main(String[] args){
+//     Scanner scn = new Scanner(System.in);
+//     int R = scn.nextInt();
+
+//     System.out.println(volOfSphere(R));
+
+   
+//   }
+// }
+
+//6) one exaample im trying for vol of cylinder i.e pie r^2 h;
+// import java.util.*;
+// public class Main {
+//   public static int volOfCyl(int R,int h){
+//    double d = Math.PI*R*R*h;
+//    int c = (int)Math.ceil(d); //this step i.e (int) we are typecasting from double to int
+
+      
+// return c;
+   
+//   }
+//   public static void main(String[] args){
+//     Scanner scn = new Scanner(System.in);
+//     int R = scn.nextInt();
+//     int h = scn.nextInt();
+
+//     System.out.println(volOfCyl(R,h));
+
+   
+//   }
+// }
+
+// 7) mcq output will be none not error bcz we are not printing anything here?
+// class Main {
+
+//    static int smaller(int a,int b) {
+//        if(a < b) {
+//            return a;
+//        }
+//        else {
+//            return b;
+//        }
+//    }
+
+
+//    public static void main(String args[]) {
+//        int a = 20,b = 45;
+//        smaller(a,b);
+//       //  System.out.println(smaller(a,b));
+
+//    }
+
+// }

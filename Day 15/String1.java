@@ -44,3 +44,56 @@
   
   
 // }
+// import java.util.*;
+// public class Main {
+//   public static void main(String[] args) {
+//       // char ch2 = 68;
+//       // System.out.print(ch2); //D
+
+//       // char ch = 'A';
+//       // ch+=2;//implicit typecasting output comes C
+//       // ch = ch + 2; // needs an explicit typecasting error comes here  
+//       // System.out.print(ch);//error
+//       // String name = "Aquib Shaikh";
+//       // System.out.print(name.indexOf('x')); // when the character is not present the it gives output as -1;
+//       Scanner sc = new Scanner(System.in);
+      
+//       // String input = "Hello world";
+//       // String s1 = sc.nextLine();
+//       // System.out.println(s1);
+//       // String s2 = sc.nextLine();
+//       // System.out.println(s2);
+
+//       char ch = sc.next().charAt(0);
+//       System.out.println(ch);
+
+//   }
+// }
+
+// import java.util.*;
+// public class Main {
+//   public static void main(String[] args) {
+//     // Scanner scn = new Scanner(System.in);
+//     // int N = scn.nextInt();
+
+//     // for(int i=1;i<=N;i++){
+//     //   for(int j=0;j<i;j++){
+//     //     System.out.print((char)('A'+ j) + "_");
+//     //   }
+//     //   System.out.println();
+
+//alternate method
+//     Scanner sc = new Scanner(System.in);
+//       int N = sc.nextInt();
+//       for(int i = 1;i<=N;i++){
+//           char A = 'A';
+//           for(int j=0;j<i;j++){
+//             System.out.print(A +"_");
+//             A++;  
+//           }
+//           System.out.println();
+//     }
+     
+      
+//   }
+// }

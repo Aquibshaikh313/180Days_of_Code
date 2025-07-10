@@ -44,6 +44,27 @@
     // }
 
     // fetchData();
+
+    const URL = "https://api.github.com/users/hiteshchoudhary";
+    const bio = document.querySelector("#bio");
+    const btn = document.querySelector("#getBio");
+    
+    
+    
+
+    const getFacts = async () => {
+      console.log("Getting data...");
+
+      let response = await fetch(URL); //response is object and one more thing this is get request we are getting request from api
+      console.log(response); //json format mai rehta
+      // console.log(response.status); //200
+      let data = await response.json();
+     bio.innerText = data.bio;
+      
+      
+    };
+    // getFacts(); //print this thing in console you will get to know fetch takes some time and this prints the result
+    btn.addEventListener('click',getFacts);
   </script>
   script
 </html>

@@ -26,17 +26,28 @@
 // //substring
 // // startIndex is inclusive → it starts from this index.
 // // endIndex is exclusive → it stops before this index.
+
 //   // System.out.print(str.substring(2,5));//nja
+
 //   String name = "Aquib shaikh";
-//     // System.out.print(name.substring(8));//
-//     System.out.print(name.substring(6,name.length()));
-//      String name = "Aquib";
-//     // System.out.print(name.substring(8));//
-//     // System.out.print(name.substring(6,name.length()));
-//     // System.out.println(name.indexOf("shaikh",3));
-// for(int i=0; i<name.length(); i++){
-//   System.out.println("character at " + i + " is : " + name.charAt(i));
+//     // System.out.print(name.substring(8));//hettigar
+//     System.out.print(name.substring(6,name.length()));i.e(6,12) // shaikh  indexing starts from 0
+
+ //      String name = "Aquib";
+//      System.out.print(name.substring(8));//code will run successfully but nothing will be printed because only 5 is the length 
+//      System.out.print(name.substring(6,name.length()));
+//      System.out.println(name.indexOf("shaikh",3));6 remember always indexing starts from 0
+
+String name2 = "Aquib";
+// for(int i = 0; i < name2.length(); i++){
+//   System.out.println("character at " + i + " is : " + name2.charAt(i));
 // }
+//output -->
+// Character at 0 is :A
+// Character at 1 is :q
+// Character at 2 is :u
+// Character at 3 is :i
+// Character at 4 is :b
 
 
 
@@ -95,5 +106,21 @@
 //     }
      
       
+//   }
+// }
+
+//Removing last word from string
+
+// import java.util.*;
+// public class Main {
+//   public static void main(String[] args) {
+//     Scanner sc = new Scanner (System.in);
+//     String str = sc.next();
+//     // String str = "Sanjay";
+//     for(int i = 0 ; i < str.length()-1 ; i++){
+//       // System.out.println( "Character at " + i + "is :"  str.charAt(i));
+//       System.out.print( str.charAt(i));
+//     }
+     
 //   }
 // }

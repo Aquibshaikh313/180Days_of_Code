@@ -1,3 +1,68 @@
+// import java.util.*;
+// public class Main {
+//   public static void printFactorial(int n){
+//     if(n < 0){
+//       System.out.print("Invalid number");
+//       return;
+//     }
+//     int factorial = 1;
+//     for(int i = n; i >= 1; i--){
+//       factorial = factorial * i;
+//     }
+//     System.out.println(factorial);
+//     return;
+//   }
+//   public static void main(String[] args) {
+//       Scanner scn = new Scanner(System.in);
+//       int n = scn.nextInt();
+//       printFactorial(n);
+      
+//         }
+// }
+
+import java.util.*;
+
+public class Main {
+
+    // Method to calculate factorial of a number
+    public static int factorial(int num) {
+        int fact = 1;
+        for (int i = num; i >= 1; i--) {
+            fact *= i;
+        }
+        return fact;
+    }
+
+    // Method to calculate nCr
+    public static int nCr(int n, int r) {
+        if (r > n || n < 0 || r < 0) {
+            System.out.println("Invalid input");
+            return -1;
+        }
+
+        int num = factorial(n);
+        int denom = factorial(r) * factorial(n - r);
+
+        return num / denom;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter value of n: ");
+        int n = sc.nextInt();
+
+        System.out.print("Enter value of r: ");
+        int r = sc.nextInt();
+
+        int result = nCr(n, r);
+
+        if (result != -1) {
+            System.out.println("nCr = " + result);
+        }
+    }
+}
+
 import java.util.*;
 
 public class Main {

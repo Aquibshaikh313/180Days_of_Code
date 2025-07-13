@@ -102,19 +102,28 @@
 
 // }
 
-
-// assignment problem
-//  int [] A = [ 4 1 5 9 1 ]
-// int B = 5
-// public class solution{
-//   public int solve(int[] A, int B){
+// Given an array of integers A and an integer B, determine whether B exists in the array.
+// Return 1 if it exists, otherwise return 0.
+      
+// public class Solution {
+//   public int solve(int[] A, int B) {
 //     int n = A.length;
- 
-//     for(int i =0;i<n;i++){
-//       if(A[i] == int B){
+
+//     for (int i = 0; i < n; i++) {
+//       if (A[i] == B) {
 //         return 1;
 //       }
 //     }
 //     return 0;
 //   }
+
+//   public static void main(String[] args) {
+//     int[] A = {4, 1, 5, 9, 1};
+//     int B = 5;
+
+//     Solution s = new Solution();
+//     int result = s.solve(A, B);
+//     System.out.println(result);
+//   }
 // }
+

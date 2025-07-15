@@ -118,3 +118,56 @@
 //     return 0; // after verifying all the elements we should return 0 if the given condition is false
 //   }
 // }
+
+//2) Reversing an array --->
+
+// import java.util.*;
+
+// public class Main {
+//   static void revArr(int[] arr){
+//     int n = arr.length;
+//     for(int i = n - 1; i >= 0; i--){
+//       System.out.println(arr[i]);
+//     }
+//   }
+
+//   public static void main(String[] args) {
+//     Scanner scn = new Scanner(System.in);
+//     // int N = scn.nextInt();
+//     int[] arr = new int[6];
+
+//     for(int i = 0; i < 6; i++){
+      
+//       arr[i] = scn.nextInt();
+//     }
+
+//     revArr(arr);
+//   }
+// }
+
+// 3) class Main {
+//     public static void main(String args[]) {
+//          int[] arr = {10, 20, 30};   // Step 1: arr = [10, 20, 30]
+         
+//          arr = new int[3];           // Step 2: arr is now [0, 0, 0]
+
+//          int ans = arr[0] * arr[1];  // Step 3: ans = 0 * 0 = 0
+
+//          System.out.println(ans);   // Output: 0
+//      }
+// } output 0
+
+//4)
+//  class Main {
+//   public static void main(String args[]) {
+
+//     int[] arr = {10, 20, 30, 40, 50};
+
+//     arr[3] = 95;     // valid
+//     arr[4] = 60;     // valid (last index)
+
+//     for (int i = 0; i < 5; i++) {
+//       System.out.print(arr[i] + " ");
+//     }
+//   }
+// }

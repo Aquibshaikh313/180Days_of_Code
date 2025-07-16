@@ -124,3 +124,24 @@ String name2 = "Aquib";
      
 //   }
 // }
+
+//count vowels and consonants (Lowercase)-->
+// public class Solution {
+//     public int[] solve(String A) {
+//         int vow = 0;
+//         int consonant = 0;
+//         int[] B = new int[2];
+
+//         for(int a = 0; a < A.length(); a++) {
+//             if(A.charAt(a) == 'a' || A.charAt(a) == 'e' || A.charAt(a) == 'i' || A.charAt(a) == 'o' || A.charAt(a) == 'u') {
+//                 vow++;
+//             } else {
+//                 consonant++;
+//             }
+//         }
+
+//         B[0] = vow;
+//         B[1] = consonant;
+//         return B;
+//     }
+// }

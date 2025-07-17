@@ -149,3 +149,99 @@
       
 //   }
 // }
+
+//ArrayList More examples to practise -->
+// 1) ******************Remove all Odd Numbers********************
+// import java.util.*;
+// public class Main {
+//   static ArrayList<Integer> oddNumber(ArrayList<Integer> al){
+//     ArrayList<Integer> oddNums = new ArrayList<Integer>();
+//    int n = al.size();
+//   //  int output = 
+//    for(int i = 0 ; i< n ; i++){
+//     if(al.get(i)% 2!=0){
+//       oddNums.add(al.get(i));
+
+//     }
+//    }
+//    return oddNums;
+//   }
+//   public static void main(String[] args) {
+//     ArrayList<Integer> al = new ArrayList<>();
+//       al.add(1); //[1]
+//       al.add(2);//[1,2]
+//       al.add(3);//[1,2,3]
+//       al.add(4);//[1,2,3,4]
+//       al.add(5);//[1,2,3,4,5]
+//       al.add(6);//[1,2,3,4,5,6]
+//       al.add(7);//[1,2,3,4,5,6,7]
+//       al.remove(2); //[1,2,4,5,6,7]
+//       Collections.sort(al);
+//       System.out.println(al);
+//       System.out.println(oddNumber(al));
+      
+      
+//   }
+// }
+
+// 2) ***************Sum of all the input number****************
+// import java.util.*;
+// public class Main {
+//   static int sumOfNumber(ArrayList<Integer> al){
+//     // ArrayList<Integer> sum = new ArrayList <Integer>();
+//    int sum = 0;
+//     int n = al.size();
+//     for(int i = 0 ; i < n ; i++){
+//      sum = sum + al.get(i);
+
+//     }
+//     return sum;
+   
+//   }
+//   public static void main(String[] args) {
+
+//       ArrayList<Integer> al = new ArrayList<>();
+//       al.add(1);
+//       al.add(2);
+//       al.add(3);
+//       al.add(4);
+//       al.add(5);
+//       al.add(6);
+//       al.add(7);
+      
+//       System.out.println(al);
+//       System.out.println(sumOfNumber(al));
+//   }
+// }
+
+// 3) *******************Reversing an ArrayList*****************************
+// import java.util.*;
+// public class Main {
+  
+ 
+// static ArrayList<Integer> revArrayList(ArrayList<Integer> al){
+//   ArrayList<Integer> rev = new ArrayList<>();
+//   int n = al.size();
+//   for(int i = n-1 ; i >=0 ; i--){
+//     rev.add(al.get(i));
+//   }
+//   return rev;
+
+
+//   }
+//   public static void main(String[] args) {
+    
+
+//       ArrayList<Integer> al = new ArrayList<>();
+//       al.add(1);
+//       al.add(2);
+//       al.add(3);
+//       al.add(4);
+//       al.add(5);
+//       al.add(6);
+//       al.add(7);
+      
+//       System.out.println(al);
+//       System.out.println(revArrayList(al));
+//   }
+// }

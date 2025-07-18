@@ -4,11 +4,12 @@
 
 // Creating a promise and resolving it after 1 second
 const promiseOne = new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    // Simulating an asynchronous task
-    // console.log("Async task complete");
-    resolve(); // Resolve the promise
-  }, 1000);
+  // setTimeout(function () {
+  //   // Simulating an asynchronous task
+  //   // console.log("Async task complete");
+  //   resolve(); // Resolve the promise
+  // }, 1000);
+   setTimeout(resolve, 1000,"We promise to deliver your pizza in 30 minutes." ); //one line method for setTimeout(function,delay,arg1 , arg2)
 });
 
 // Consuming the resolved promise using .then()

@@ -22,6 +22,26 @@
 //   }
 // }
 
+//**************************+++++++++++++++++++++++Same method using void********************************************
+// import java.util.*;
+
+// public class Main {
+//     static void shiftByOne(int[] arr) {
+//         int n = arr.length;
+//         int temp = arr[n - 1];
+//         for (int i = n - 2; i >= 0; i--) {
+//             arr[i + 1] = arr[i];
+//         }
+//         arr[0] = temp;
+//         // No return statement here
+//     }
+
+//     public static void main(String[] args) {
+//         int[] arr = {1, 2, 3, 4, 5};
+//         shiftByOne(arr); // just call the method, no return value
+//         System.out.println(Arrays.toString(arr)); // print the modified array
+//     }
+// }
 //**************************frequency of ********************
 
 // public class Main {

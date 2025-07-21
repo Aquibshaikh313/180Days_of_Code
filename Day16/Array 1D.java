@@ -378,8 +378,8 @@ public class Main {
 //   }
 //   public static void main(String[] args) {
     
-//      int[] A = {5,5,1};
+//      int[] A = {5,5,1}; // if the input is {1,2,4,4,5} //output will be 4 becoz 4,4 are two different elements even if they are same
    
-//      System.out.println(greaterCount(A));
+//      System.out.println(greaterCount(A)); //output for given input --> 1
 //   }
 // }

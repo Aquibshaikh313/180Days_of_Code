@@ -21,28 +21,29 @@
       
 //   }
 // }
+//**************************Same method using void****************************
+import java.util.*;
 
-//**************************+++++++++++++++++++++++Same method using void********************************************
-// import java.util.*;
+public class Main {
+    static void shiftByOne(int[] arr) {
+        int n = arr.length;
+        int temp = arr[n - 1];
+        for (int i = n - 2; i >= 0; i--) {
+            arr[i + 1] = arr[i];
+        }
+        arr[0] = temp;
+        // No return statement here
+    }
 
-// public class Main {
-//     static void shiftByOne(int[] arr) {
-//         int n = arr.length;
-//         int temp = arr[n - 1];
-//         for (int i = n - 2; i >= 0; i--) {
-//             arr[i + 1] = arr[i];
-//         }
-//         arr[0] = temp;
-//         // No return statement here
-//     }
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        shiftByOne(arr); // just call the method, no return value
+        System.out.println(Arrays.toString(arr)); // print the modified array
+    }
+}
 
-//     public static void main(String[] args) {
-//         int[] arr = {1, 2, 3, 4, 5};
-//         shiftByOne(arr); // just call the method, no return value
-//         System.out.println(Arrays.toString(arr)); // print the modified array
-//     }
-// }
-//**************************frequency of ********************
+
+//**************************frequency of Element********************
 
 // public class Main {
 //   static int frequencyOfK(int[] arr, int k){
@@ -141,7 +142,7 @@
 // *******************Printing Even numbers using ArrayList************************
 // import java.util.*;
 // public class Main {
-//   static ArrayList<Integer> evenNumber(ArrayList<Integer> al){
+//   static ArrayList<Integer> evenNumber(ArrayList<Integer> al){ // this is function remember that
 //     ArrayList<Integer> evenNums = new ArrayList<Integer>();
 //    int n = al.size();
 //   //  int output = 
@@ -170,7 +171,40 @@
 //   }
 // }
 
-//ArrayList More examples to practise -->
+//****************************************************Printing Odd Numbers**********************************************************
+
+// import java.util.*;
+// public class Main {
+//   static ArrayList<Integer> oddNumber(ArrayList<Integer> al){
+//     ArrayList<Integer> oddNums = new ArrayList<>();
+//     int n = al.size();
+//     for(int i = 0 ; i < n ; i++){
+//       if(al.get(i) %2 != 0){
+//         oddNums.add(al.get(i));
+//       }
+//     }
+//     return oddNums;
+//   }
+//   public static void main(String[] args) {
+//     ArrayList<Integer> al = new ArrayList<>();
+//       al.add(1); //[1]
+//       al.add(2);//[1,2]
+//       al.add(3);//[1,2,3]
+//       al.add(4);//[1,2,3,4]
+//       al.add(5);//[1,2,3,4,5]
+//       al.add(6);//[1,2,3,4,5,6]
+//       al.add(7);//[1,2,3,4,5,6,7]
+//       al.remove(2); //[1,2,4,5,6,7]
+//       Collections.sort(al);
+//       System.out.println(al);
+//       System.out.println(oddNumber(al));
+      
+//   }
+// }
+
+
+//***********************************ArrayList More examples to practise --------------------------------------------------------->
+
 // 1) ******************Remove all Odd Numbers********************
 // import java.util.*;
 // public class Main {
@@ -263,5 +297,89 @@
       
 //       System.out.println(al);
 //       System.out.println(revArrayList(al));
+//   }
+// }
+
+// More to be practised-->
+// Find Maximum and Minimum Elements
+// Check if List is Palindrome
+// Merge Two ArrayLists
+// Find Duplicate Elements
+// Print Elements at Even Index
+// Count Frequency of Each Element
+// Remove Duplicates from ArrayList
+
+//**********************************************Scaler Assignment Problems**************************
+// 1) You are given an integer array A and an integer B.
+// You are required to return the count of pairs having sum equal to B.
+// NOTE: pair (i,j) and (j,i) are same.
+
+// import java.util.*;
+// public class Main {
+//  static int countPair(int[] A, int B){
+//   int count = 0 ;
+//   for(int i = 0 ; i < A.length ; i++){
+//     for(int j = i+1 ; j < A.length ; j++){
+//       if(A[i]+ A[j] == B){
+//         count++;
+//       }
+//     }
+
+//   }
+//   return count;
+
+//   }
+//   public static void main(String[] args) {
+    
+//     int[] A = {1,2,3,2,1};
+//     int B = 5;
+    
+    
+//     System.out.println(countPair(A, B));
+//   }
+// } output 2
+
+// 2) checking if the array is sorted or not 
+// import java.util.*;
+// public class Main {
+//    static boolean sortedArr(int[] A){
+//     int n = A.length;
+//     int count = 0 ;
+//       for(int i = 0 ; i < n - 1; i++){ //n-1 bcz since we are doing A[i+1] it will go beyond n and will give us error
+       
+//         if(A[i] > A[i+1]){
+//         return false;
+//         }
+//       }
+//       return true;
+//   }
+//   public static void main(String[] args) {
+    
+//      int[] A = {1,2,3,4};
+//     //  int n = A.length;
+//      System.out.println(sortedArr(A));
+//   }
+// } //true
+
+// 3)Given an array A of N integers. 
+// Count the number of elements that have at least 1 elements greater than itself.
+// import java.util.*;
+// public class Main {
+//    static int greaterCount(int[] A){
+//     int n = A.length;
+//     int count = 0 ;
+//       for(int i = 0 ; i < n-1; i++){
+       
+//         if(A[i] > A[i+1]){
+//         count ++ ;
+//         }
+//       }
+//       return count;
+//   }
+//   public static void main(String[] args) {
+    
+//      int[] A = {5,5,1};
+   
+//      System.out.println(greaterCount(A));
 //   }
 // }

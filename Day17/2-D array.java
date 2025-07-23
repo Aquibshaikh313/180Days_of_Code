@@ -371,6 +371,54 @@ public class Main {
   }
 }
 
+//********************************************************************Assignment problem 6th******************************************************
+//Given 2D Array A[][] and Row index B, return max of Bth row.
+import java.util.*;
+public class Main {
+  static int printMaxLastRow(int[][] mat, int B){
+    int rows = mat.length ;  
+    int cols = mat[0].length;
+    int max = mat[B][0];
+    // int max = Integer.MIN_VALUE;
+    for(int c = 0 ; c < cols ; c++){
+      if(mat[B][c] > max){
+        max = mat[B][c];
+      }
+    }
+    return max ;
+
+  
+  }
+  public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+
+     //taking input N-rows and M columns 
+     int N = sc.nextInt();
+     int M = sc.nextInt();
+
+     //taking 2-D array 
+     int[][] mat = new int[N][M];
+     int B = 2 ;
+
+     //reading values 
+     for(int i = 0 ; i < N ; i++){
+      for(int j = 0 ; j < M ; j++){
+        mat[i][j] = sc.nextInt();
+      }
+     }
+     int maxElement = printMaxLastRow(mat,B);
+     System.out.println(maxElement);
+
+  }
+}
+//input 
+// A = [[12, 65, 89, 74],
+//      [22, 44, 12, 30],
+//      [10, 12, 97, 19]]
+// B = 2
+
+//97
+
 
 
 

@@ -122,6 +122,259 @@ public class Main {
 // 5 6 7 8 
 // 9 10 11 12 
 
+//Printing in Wave form -->
+import java.util.*;
+public class Main {
+  static void printWaveForm(int[][] mat){
+    int rows = mat.length ;
+    int cols = mat[0].length;
+
+    for(int r = 0 ; r < rows ; r++){ //left to right
+      if(r%2== 0){
+        for(int c = 0 ; c < cols ; c++){
+        System.out.print(mat[r][c] + " ");
+      }
+
+      
+      }else{//right to left
+      for(int c = cols-1 ; c >= 0 ; c--){
+        System.out.print(mat[r][c] + " ");
+      }
+
+      }
+      System.out.println();
+      
+    }
+  }
+  public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+    
+    //Taking N-rows and M-columns 
+     int N = sc.nextInt();
+     int M = sc.nextInt();
+
+    //creating 2-D array 
+    int[][] mat = new int[N][M]; //if we failed to write N,M it will throw error like missing dimension
+
+    //reading values for row-wise 
+    for(int i = 0 ;i < N ; i++){
+      for(int j = 0 ; j< M ; j++){
+        mat[i][j] = sc.nextInt();
+      }
+    }
+
+    printWaveForm(mat);
+
+
+  }
+}
+ //input :
+// 4 4
+// 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+
+// output
+// 1 2 3 4 
+// 8 7 6 5 
+// 9 10 11 12 
+// 16 15 14 13 
+
+//printing zero column 
+import java.util.*;
+public class Main {
+  static void printZeroCol(int[][] mat){
+    int rows = mat.length ;  
+    // int cols = mat[0].length;
+    for(int r = 0; r < rows ; r++){
+      System.out.print(mat[r][0] + " ");
+    }
+  }
+  public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+
+     //taking input N-rows and M columns 
+     int N = sc.nextInt();
+     int M = sc.nextInt();
+
+     //taking 2-D array 
+     int[][] mat = new int[N][M];
+
+     //reading values 
+     for(int i = 0 ; i < N ; i++){
+      for(int j = 0 ; j < M ; j++){
+        mat[i][j] = sc.nextInt();
+      }
+     }
+     printZeroCol(mat);
+  }
+}
+
+//**************************Printing all columns************************************
+import java.util.*;
+public class Main {
+  static void printAllCols(int[][] mat){
+    int rows = mat.length ;  
+    int cols = mat[0].length;
+   for(int c = 0 ; c < cols ; c++){
+     for(int r = 0; r < rows ; r++){
+      System.out.print(mat[r][c] + " ");
+    }
+    System.out.println();
+   }
+  }
+  public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+
+     //taking input N-rows and M columns 
+     int N = sc.nextInt();
+     int M = sc.nextInt();
+
+     //taking 2-D array 
+     int[][] mat = new int[N][M];
+
+     //reading values 
+     for(int i = 0 ; i < N ; i++){
+      for(int j = 0 ; j < M ; j++){
+        mat[i][j] = sc.nextInt();
+      }
+     }
+     printAllCols(mat);
+  }
+}
+
+
+//Printing waving format for cols : -->
+import java.util.*;
+public class Main {
+  static void printAllCols(int[][] mat){
+    int rows = mat.length ;  
+    int cols = mat[0].length;
+   for(int c = 0 ; c < cols ; c++){
+    if(c%2 == 0){
+       for(int r = 0; r < rows ; r++){
+      System.out.print(mat[r][c] + " ");
+    }
+    }else{
+      for(int r = rows-1; r>=0 ; r--){
+        System.out.print(mat[r][c]+ " ");
+      }
+    }
+    
+    System.out.println();
+   }
+  }
+  public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+
+     //taking input N-rows and M columns 
+     int N = sc.nextInt();
+     int M = sc.nextInt();
+
+     //taking 2-D array 
+     int[][] mat = new int[N][M];
+
+     //reading values 
+     for(int i = 0 ; i < N ; i++){
+      for(int j = 0 ; j < M ; j++){
+        mat[i][j] = sc.nextInt();
+      }
+     }
+     printAllCols(mat);
+  }
+}
+
+
+
+//Printing max value among rows and columns -->
+import java.util.*;
+public class Main {
+  static int printMaxElement(int[][] mat){
+    int rows = mat.length ;  
+    int cols = mat[0].length;
+    int max = mat[0][0];
+    // int max = Integer.MIN_VALUE;
+    for( int r = 0 ; r < rows ; r++){
+      for(int c = 0 ; c < cols ; c++){
+        if(mat[r][c]> max){
+          max = mat[r][c];
+        }
+      }
+    }
+    return max ;
+
+  
+  }
+  public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+
+     //taking input N-rows and M columns 
+     int N = sc.nextInt();
+     int M = sc.nextInt();
+
+     //taking 2-D array 
+     int[][] mat = new int[N][M];
+
+     //reading values 
+     for(int i = 0 ; i < N ; i++){
+      for(int j = 0 ; j < M ; j++){
+        mat[i][j] = sc.nextInt();
+      }
+     }
+     int maxElement = printMaxElement(mat);
+     System.out.println(maxElement);
+
+  }
+}
+
+
+// Finding out maximum integer in each row
+import java.util.*;
+public class Main {
+  static int[] printMaxElement(int[][] mat){
+    int rows = mat.length ;  
+    int cols = mat[0].length;
+    int[] ans = new int[rows];
+    int max = mat[0][0];
+    // int max = Integer.MIN_VALUE;
+    for( int r = 0 ; r < rows ; r++){
+      for(int c = 0 ; c < cols ; c++){
+        if(mat[r][c]> max){
+          max = mat[r][c];
+        }
+      }
+      ans[r] = max;
+      System.out.print(ans[r] + " ");
+     
+    }
+    return ans ;
+
+  
+  }
+  public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+
+     //taking input N-rows and M columns 
+     int N = sc.nextInt();
+     int M = sc.nextInt();
+
+     //taking 2-D array 
+     int[][] mat = new int[N][M];
+
+     //reading values 
+     for(int i = 0 ; i < N ; i++){
+      for(int j = 0 ; j < M ; j++){
+        mat[i][j] = sc.nextInt();
+      }
+     }
+   printMaxElement(mat);
+    //  System.out.println(maxElement);
+
+  }
+}
+
+
+
+
+
 
 
 

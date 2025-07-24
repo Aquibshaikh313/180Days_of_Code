@@ -1,78 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Closure</title>
-  </head>
-  <body>
-    <button id="green">green</button>
-    <button id="orange">Orange</button>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Closure</title>
+</head>
+<body>
+  <!-- Buttons to change background color -->
+  <button id="green">Green</button>
+  <button id="orange">Orange</button>
 
   <script>
-    // function outerFunction() {
-    //   const name = "function";
-    //   function innerFunction() {
-    //     console.log(`this is inner ${name}`);
-    //   }
-    //   return innerFunction;
-    // }
-
-    // const inner = outerFunction();
-    // inner();
-
+    // ===============================
+    // Example 1: Closure Demonstration
+    // ===============================
+    // outerFunction takes a parameter `name` and returns an inner function
+    // that "remembers" the value of `name` through closure.
     function outerFunction(name) {
       return function () {
         console.log(name);
       };
     }
+
+    // Create a closure with the name "Mozilla"
     const outerName = outerFunction("Mozilla");
-    outerName();
+    outerName(); // Output: Mozilla
 
-    //Private Data
-
+    // ===============================
+    // Example 2: Private Data Using Closures
+    // ===============================
+    // `secret` is a factory function that returns a function
+    // which logs a private variable (`name`).
     function secret(name) {
       return function () {
         console.log(name);
       };
     }
+
+    // Create closures with private data
     const Aquib = secret("AquibBhai");
     const coding = secret("Aquib Loves coding");
-    Aquib();
-    coding();
 
+    Aquib();  // Output: AquibBhai
+    coding(); // Output: Aquib Loves coding
+
+    // ===============================
+    // Example 3: Addition Using Closures
+    // ===============================
+    // `adding` returns a function that remembers `x` and `y`
+    // and logs their sum when called.
     function adding(x, y) {
       return function () {
         console.log(x + y);
       };
     }
+
+    // Create a closure that adds 5 and 3
     const result = adding(5, 3);
-    result();
+    result(); // Output: 8
   </script>
 
   <script>
+    // ========================================
+    // Example 4: Using Closures for Event Handlers
+    // ========================================
+    // `clickHandler` returns a function that sets
+    // the background color to the given color.
     function clickHandler(color) {
-        return function(){
-            document.body.style.backgroundColor = `${color}`
-        }
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
     }
-    
-    document.getElementById('orange').onclick = clickHandler('orange')
-    document.getElementById('green').onclick = clickHandler('green')
 
-    //Alternate Method
+    // Attach event handlers to buttons using closures
+    document.getElementById('orange').onclick = clickHandler('orange');
+    document.getElementById('green').onclick = clickHandler('green');
+
+    // ========================
+    // Alternate Usage Example
+    // ========================
     // window.onload = function () {
-    //     function clickHandler(color) {
-    //         return function () {
-    //             document.body.style.backgroundColor = `${color}`;
-    //         }
-    //     }
-
-    //     const orange = clickHandler("orange");
-    //     orange(); // sets background color
-    // }
-
-
-</script>
+    //   const orange = clickHandler("orange");
+    //   orange(); // Changes background to orange on load
+    // };
+  </script>
+</body>
 </html>

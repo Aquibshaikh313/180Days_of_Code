@@ -1,3 +1,48 @@
+//Printing the ArrayList -->
+import java.util.*;
+
+public class Main {
+  static void print (ArrayList<ArrayList<Integer>> arr ){
+    int n = arr.size();
+  
+    //iterate over each rows 
+    for(int i = 0 ; i < n ; i++){
+      //Get no. of columns in current rows  -->
+      int m = arr.get(i).size(); //no. of columns in current rows
+      for(int j = 0 ; j < m ; j ++ ){
+        System.out.print(arr.get(i).get(j) + " ");
+      }
+      System.out.println();
+    }
+  }
+
+  public static void main(String[] args) {
+    Scanner sc = new Scanner (System.in);
+
+    int n = sc.nextInt();
+    int m = sc.nextInt();
+
+    //2D ArrayList matrix
+
+    ArrayList<ArrayList<Integer>> arr = new ArrayList<>();
+    
+      for (int i = 0; i < n; i++) {
+      ArrayList<Integer> row = new ArrayList<>();
+      for (int j = 0; j < m; j++) {
+        int colNum = sc.nextInt();
+        row.add(colNum);  // add colnum to the row
+      }
+           arr.add(row); // add row to the main 2D list
+    }
+    print(arr);
+  
+  }
+}
+//Input     output
+2 3         
+1 2 3       1 2 3
+4 5 6       4 5 6
+
 import java.util.*;
 
 public class Main {

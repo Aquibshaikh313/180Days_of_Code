@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event 2</title>
+    <style>
+      body {
+        background-color: #414141;
+        color: white;
+      }
+      #box {
+        margin: 10px;
+        width: 200px;
+        height: 100px;
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="myButton">Click Me!</button>
+    <h1 id="chagnebtn">Engineer Codes</h1>
+
+    <form id="myForm">
+      <input type="text" id="name" placeholder="Enter your name" required />
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="box"><p>Hover over me!</p></div>
+
+    <button class="colorButton" data-color="red">Red</button>
+    <button class="colorButton" data-color="green">Green</button>
+    <button class="colorButton" data-color="blue">Blue</button>
+  </body>
+  <script>
+    // document.getElementById('myButton').addEventListener("click",()=>{
+    //     alert ("Bro u just clicked me");
+    // },false)
+
+    // document.getElementById("myButton").addEventListener(
+    //   "click",
+    //   function () {
+    //     document.body.style.backgroundColor = "Red";
+    //     alert("Bro u just clicked me & changed bg to red");
+    //     let h1 = document.querySelector("h1");
+    //     h1.style.color = "white";
+    //   },
+    //   false
+    // );
+
+    document.getElementById("myForm").addEventListener(
+      "submit",
+      (e) => {
+        e.preventDefault();
+        let inputField = document.getElementById("name");
+        let inputValue = inputField.value;
+        if (inputValue == "") {
+          alert("Enter your name");
+        } else {
+          alert(inputValue);
+        }
+
+        inputField.value = "";
+      },
+      false
+    );
+
+    // document.getElementById('chagnebtn').addEventListener('click',function(){
+    //     chagnebtn.textContent = "Aquib Bhai";
+    // })
+    document.getElementById("box").addEventListener("mouseout", (e) => {
+      box.style.backgroundColor = "lightcoral";
+      let p = document.querySelector("p");
+      p.style.color = "black";
+      console.log("pointer moved to:", e.relatedTarget); //use this instead of toElement..
+    });
+    document.getElementById("box").addEventListener("mouseover", () => {
+      box.style.backgroundColor = "red";
+      let p = document.querySelector("p");
+      p.style.color = "white";
+    });
+    // document.getElementById('chagnebtn').addEventListener("click",function(){
+    //     chagnebtn.style.display = "none";
+    // })
+    // const buttons = document.querySelectorAll(".colorButton");
+
+    // document.getElementById('colorButton').forEach(funciton(button){
+    //     button.addEventListener('click',function(){
+
+    //     })
+    // })
+    const buttons = document.querySelectorAll(".colorButton");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const color = button.getAttribute("data-color"); // Get the color from data-color attribute
+        chagnebtn.style.color = color; // Change text color
+        console.log(color);
+      });
+    });
+  </script>
+</html>

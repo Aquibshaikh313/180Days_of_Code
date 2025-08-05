@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .go {
+        color: green;
+      }
+      .stop {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="my_box">
+      <h3>Hello World</h3>
+    </div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // variable to store our intervalID
+    let intervalId;
+
+    function changeColor() {
+      if (!intervalId) {
+        intervalId = setInterval(changeTxtColor, 1000);
+        console.log("hello");
+      }
+    }
+    function changeTxtColor() {
+      const newFun = document.getElementById("my_box");
+      newFun.className = newFun.className === "go" ? "stop" : "go";
+    }
+
+    function stopChangeColor() {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+
+    document.getElementById("start").addEventListener("click", changeColor);
+    document.getElementById("stop").addEventListener("click", stopChangeColor);
+  </script>
+</html>

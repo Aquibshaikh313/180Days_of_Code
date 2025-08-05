@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DOM Practice Problems</title>
+  <style>
+    .box {
+      height: 350px;
+      width: 100px;
+      background-color: aqua;
+      color: brown;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="hero"></h2>
+  <img src="" alt="img available" />
+
+  <ul class="main-list">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+  </ul>
+
+  <div class="box">Box</div>
+
+  <p class="content">Content</p>
+
+  <ul class="fruitList"></ul> <!-- For Problem 14 -->
+
+</body>
+
+<script>
+  // ✅ Problem 1: Create a new paragraph and prepend to body
+  const newPara = document.createElement('p');
+  newPara.innerText = 'Hello DOM!';
+  document.body.prepend(newPara);
+
+  // ✅ Problem 2: Update image alt text
+  const img = document.querySelector('img');
+  img.setAttribute('alt', 'image not available');
+
+  // ✅ Problem 3: Add new <li> at beginning of main list
+  const newLi = document.createElement('li');
+  newLi.innerText = 'item5';
+  document.querySelector('.main-list').prepend(newLi);
+
+  // ✅ Problem 4: Change class of <h2>
+  const heading = document.querySelector('h2');
+  heading.setAttribute('class', 'villain');
+
+  // ✅ Problem 5: Create a <div> with id "container"
+  const div = document.createElement('div');
+  div.innerText = 'Div created';
+  div.setAttribute('id', 'container');
+  document.body.append(div);
+
+  // ✅ Problem 6: Add classes to <p>
+  const para = document.querySelector('p');
+  para.classList.add('highlight', 'bold');
+
+  // ✅ Problem 7: Remove class from <p>
+  para.classList.remove('content');
+
+  // ✅ Problem 8: Create styled button inside .box
+  const btn = document.createElement('button');
+  btn.innerText = 'Submit';
+  btn.style.backgroundColor = 'blue';
+  btn.style.color = 'white';
+  btn.style.margin = '10px';
+  document.querySelector('.box').prepend(btn);
+
+  // ✅ Problem 9: Create and prepend <h3>
+  const h3 = document.createElement('h3');
+  h3.innerText = 'Subheading';
+  document.body.prepend(h3);
+
+  // ✅ Problem 10: Remove last <li> in list
+  const ul = document.querySelector('.main-list');
+  ul.lastElementChild.remove();
+
+  // ✅ Problem 11: Add 3 <li> elements from array
+  const items = ["Learn JS", "Practice DOM", "Build Projects"];
+  items.forEach((item) => {
+    const li = document.createElement('li');
+    li.innerText = item;
+    ul.appendChild(li);
+  });
+
+  // ✅ Problem 12: Create and append image to .box
+  const newImg = document.createElement('img');
+  newImg.setAttribute('src', 'https://via.placeholder.com/150');
+  newImg.setAttribute('alt', 'placeholder');
+  document.querySelector('.box').appendChild(newImg);
+
+  // ✅ Problem 13: Add "success" class to all <li>
+  document.querySelectorAll('li').forEach((li) => {
+    li.classList.add('success');
+  });
+
+  // ✅ Problem 14: Render fruit list using forEach
+  const Fruits = ["mango", "apple", "chickoo", "banana", "orange"];
+  const fruitList = document.querySelector(".fruitList");
+  Fruits.forEach((fruit) => {
+    const li = document.createElement("li");
+    li.innerText = fruit;
+    fruitList.appendChild(li);
+  });
+
+  // ✅ Problem 15: Create user profile cards
+  const users = [
+    {
+      name: "John Doe",
+      role: "Frontend Developer",
+      skills: ["JavaScript", "HTML", "CSS"],
+      image: "https://via.placeholder.com/150",
+    },
+    {
+      name: "Jane Smith",
+      role: "Backend Developer",
+      skills: ["Node.js", "Express", "MongoDB"],
+      image: "https://via.placeholder.com/150",
+    },
+  ];
+
+  users.forEach((user) => {
+    const card = document.createElement("div");
+
+    const img = document.createElement("img");
+    img.setAttribute("src", user.image);
+    img.setAttribute("alt", "Profile Picture");
+    card.appendChild(img);
+
+    const name = document.createElement("h2");
+    name.innerText = user.name;
+    card.appendChild(name);
+
+    const role = document.createElement("p");
+    role.innerText = user.role;
+    card.appendChild(role);
+
+    const skillList = document.createElement("ul");
+    user.skills.forEach((skill) => {
+      const skillItem = document.createElement("li");
+      skillItem.innerText = skill;
+      skillList.appendChild(skillItem);
+    });
+
+    card.appendChild(skillList);
+    document.body.appendChild(card);
+  });
+</script>
+</html>

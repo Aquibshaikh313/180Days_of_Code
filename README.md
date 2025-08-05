@@ -8,10 +8,9 @@ Whenever I get stuck while building something or learning a new concept, I don�
 
 ## 🛠️ What's inside
 
-- JavaScript notes and snippets(About to complete)
-- Java(Ongoing for DSA)
-- (Starting soon) React as I progress further with JavaScript
-- Eventually MERN stack
+- JavaScript notes and snippets
+- Currently working on Reactjs
+- Eventually my developer journey notes,codes,snippets
 - HTML/CSS might be added later, but currently my focus is on logic building and core programming
 
 This is an evolving repo—feel free to explore, use, or contribute if you find it helpful!
